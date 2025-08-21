@@ -1,11 +1,11 @@
 import pandas as pd
 import numpy as np
 
-# Define parameters
+# Define parameters. Rows are the numbers of total bins in the genome and cols are the total number of samples
 rows = 21906
 cols = 53
 
-# Define column-specific percentages (converted to fractions)
+# Define column-specific percentages (converted to fractions) matching each sample
 percentages_ones = np.array([
     17.759985, 15.1857058, 13.5891357, 13.8454582, 10.8756993, 12.0291833,
     11.5494828, 15.4347125, 13.3401303, 9.99319537, 12.2525589, 15.1820357,
@@ -31,7 +31,7 @@ for j in range(cols):
 df = pd.DataFrame(matrix)
 
 # Save to Excel file
-df.to_excel("random_binary_matrix_broad_distribution.xlsx", index=False, header=False)
+df.to_excel("random_binary_matrix_distribution.xlsx", index=False, header=False)
 
-print("File saved as 'random_binary_matrix_broad_distribution.xlsx'")
+print("File saved as 'random_binary_matrix_distribution.xlsx'")
 
